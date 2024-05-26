@@ -1,0 +1,47 @@
+[tool.ruff]
+line-length = 120
+fix = true
+extend-include = ["*.py", "*.pyi", "*.ipynb"]
+exclude = [
+    "venv",
+    ".venv",
+    "env",
+    ".env",
+    ".git",
+    "*.md",
+    "*.json",
+    "*.log",
+    "*.html",
+    "*.xml",
+    "*.png",
+    "*.jpg",
+    "*.jpeg",
+]
+
+[tool.ruff.lint]
+extend-select = ["I"]
+ignore = [
+    "F401", # disable unused imports
+    "F403", # disable `from module import *` used; unable to detect undefined names
+    "F405", # disable `name may be undefined, or defined from star imports`
+    "E722", # disable bare `except`, specify exception instead
+    "F841", # disable local variable '...' is assigned to but never used
+    "F821", # disable undefined name '...'
+    "E402", # disable module level import not at top of file
+    "E712", # disable comparison to True should be 'if cond is True:' or 'if cond:'
+    "F811", # disable redefinition of unused '...'
+    "E721", # disable do not compare types, use 'isinstance
+    "E731", # disable do not assign a lambda expression, use a def
+    "E741", # disable error type 'do not use variables named '...'
+]
+
+[tool.ruff.lint.isort]
+length-sort = false
+force-wrap-aliases = true
+combine-as-imports = true
+lines-after-imports = 2
+lines-between-types = 1
+split-on-trailing-comma = true
+no-sections = false
+order-by-type = true
+section-order = ["future", "standard-library", "third-party", "first-party", "local-folder"]
