@@ -3,6 +3,7 @@
 - I made everything on MacOS, in PyCharm, with Python 3.12.3.
 - I just wanted to make a simple example of how to use Django with Telegram WebApp. My code is not perfect, but it
   works :D and remember that this is just an example :)
+
   <img src="readme_pics/preview.png" alt="preview.png" width="25%">
 
 # Setting up the project
@@ -46,27 +47,29 @@ export ruff="/Users/user_name/.pyenv/versions/3.12.3/bin/ruff" # specify your fu
 
 2. Setting in `File Watcher` (`Preferences` -> `Tools` -> `File Watchers`):
 	- `Ruff check` settings:
-    ```
-        File type: Any
-        Scope: python
-        Program: ruff 
-        Argument: check --config $ProjectFileDir$/pyproject.toml $FilePath$
-        OutPut paths to refresh: $FilePath$
-        Working directory: $ProjectFileDir$
-        Show console: On Error
-        All checkboxes should be empty.
-    ```
-   <img src="readme_pics/ruff_check.png" alt="ruff_check.png" width="50%">
+	  ```
+		  File type: Any
+		  Scope: python
+		  Program: ruff 
+		  Argument: check --config $ProjectFileDir$/pyproject.toml $FilePath$
+		  OutPut paths to refresh: $FilePath$
+		  Working directory: $ProjectFileDir$
+		  Show console: On Error
+		  All checkboxes should be empty.
+	  ```
+
+   <img src="readme_pics/ruff_check.png" alt="ruff_check.png" width="70%">
 
 	- `Ruff format` settings (same as in `Ruff check` except `Argument`):
-   ``` 
-       File type: Python
-       Scope: python
-       Program: ruff 
-       Argument: format --config $ProjectFileDir$/pyproject.toml $FilePath$
-       OutPut paths to refresh: $FilePath$
-       Working directory: $ProjectFileDir$
-       Show console: On Error
-       All checkboxes should be empty.
-   ```
-   <img src="readme_pics/ruff_format.png" alt="ruff_format.png" width="50%">
+	   ``` 
+		   File type: Python
+		   Scope: python
+		   Program: ruff 
+		   Argument: format --config $ProjectFileDir$/pyproject.toml $FilePath$
+		   OutPut paths to refresh: $FilePath$
+		   Working directory: $ProjectFileDir$
+		   Show console: On Error
+		   All checkboxes should be empty.
+	   ```
+
+   <img src="readme_pics/ruff_format.png" alt="ruff_format.png" width="70%">
