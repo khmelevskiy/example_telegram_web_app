@@ -43,7 +43,7 @@ def click_coin(request):
         user.points += 1
         user.save()
 
-        # Записываем историю клика
+        # Save click history
         ClickHistory.objects.create(user=user, points_after_click=user.points)
 
         return JsonResponse({"points": user.points})
