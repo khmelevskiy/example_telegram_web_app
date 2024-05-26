@@ -1,5 +1,7 @@
 #!/bin/bash
 
+./requirements/install_requirements.sh
+
 #django-admin startproject example_telegram_web_app # for init project
 #cd example_telegram_web_app && python manage.py startapp telegram_web_app # for init app
 
